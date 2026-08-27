@@ -22,49 +22,53 @@
 
   <!-- NAV -->
   <header class="site-nav">
-    <a href="#top" class="brand">
-      <span class="brand-mark">CoD</span>
-      <span class="brand-word">The Cost of Delay</span>
-    </a>
-    <nav class="nav-links">
-      <a href="#story">Story</a>
-      <a href="#voices">Voices</a>
-      <a href="#change">Recommendations</a>
-      <a href="#about">About</a>
-    </nav>
-    <a class="nav-cta" href="#contact">Contact</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="wrap nav-wrap">
+      <a href="#top" class="brand">
+        <span class="brand-mark">CoD</span>
+        <span class="brand-word">The Cost of Delay</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#story">Story</a>
+        <a href="#voices">Voices</a>
+        <a href="#change">Recommendations</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <!-- HERO -->
   <section class="hero" id="top">
-    <p class="eyebrow">A data story · Nigeria's healthcare system</p>
-    <h1 class="hero-title">The Cost<br>of Delay</h1>
-    <p class="hero-sub">Every percentage point in a health budget is a person waiting somewhere for care. This is what the numbers — and the people behind them — say about Nigeria's healthcare system.</p>
-    <div class="hero-stat-row">
-      <div class="hero-stat">
-        <span class="hero-stat-num">75<span class="unit">%+</span></span>
-        <span class="hero-stat-label">of health spending in Nigeria is paid out-of-pocket by patients and families</span>
+    <div class="wrap">
+      <p class="eyebrow kicker">A data story · Nigeria's healthcare system</p>
+      <h1 class="hero-title">The Cost<br>of Delay</h1>
+      <p class="hero-sub">Every percentage point in a health budget is a person waiting somewhere for care. This is what the numbers — and the people behind them — say about Nigeria's healthcare system.</p>
+      <div class="hero-stat-row">
+        <div class="hero-stat">
+          <span class="hero-stat-num">75<span class="unit">%+</span></span>
+          <span class="hero-stat-label">of health spending in Nigeria is paid out-of-pocket by patients and families</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">4.19<span class="unit">%</span></span>
+          <span class="hero-stat-label">of GDP — Nigeria's current health expenditure, 34th of 54 African countries</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">253<span class="unit">k</span></span>
+          <span class="hero-stat-label">estimated deaths a year linked to insufficient access to healthcare</span>
+        </div>
       </div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">4.19<span class="unit">%</span></span>
-        <span class="hero-stat-label">of GDP — Nigeria's current health expenditure, 34th of 54 African countries</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">253<span class="unit">k</span></span>
-        <span class="hero-stat-label">estimated deaths a year linked to insufficient access to healthcare</span>
-      </div>
+      <a href="#story" class="scroll-cue">Begin the story <span class="arrow">↓</span></a>
     </div>
-    <a href="#story" class="scroll-cue">Begin the story <span class="arrow">↓</span></a>
   </section>
 
   <main id="story">
 
     <!-- INTRO -->
     <section class="section intro-section">
-      <div class="section-inner narrow">
+      <div class="wrap narrow">
         <p class="kicker">Introduction</p>
         <p class="lead">Nigeria is Africa's most populous country, with more than 200 million people relying on a healthcare system already under considerable pressure <span class="src">(World Bank, 2026)</span>. Behind that scale are millions of individual experiences — people seeking treatment, families trying to afford care, and healthcare professionals working within limited resources. Nigeria continues to face challenges relating to healthcare financing, workforce capacity, infrastructure and access to essential services <span class="src">(WHO/AHOP, 2025)</span>.</p>
         <p>But the healthcare crisis is not only about hospitals or doctors. <strong>It is also about whether people can afford to seek help when they need it.</strong> Out-of-pocket spending accounts for more than <strong>75% of total health expenditure in Nigeria</strong>, placing a substantial financial burden directly on individuals and families <span class="src">(WHO/AHOP, 2025)</span>.</p>
@@ -73,7 +77,7 @@
 
     <!-- AFRICA COMPARISON -->
     <section class="section" id="africa">
-      <div class="section-inner">
+      <div class="wrap">
         <p class="kicker">01 — Continental context</p>
         <h2>How does Nigeria compare across Africa?</h2>
         <div class="section-copy">
@@ -81,15 +85,13 @@
           <p>One useful measure is <strong>Current Health Expenditure (CHE) as a percentage of GDP</strong> — the value of healthcare goods and services consumed within a year relative to the size of a country's economy <span class="src">(WHO, 2026)</span>. For this project, 54 African countries were compared using 2023 data from the WHO Global Health Expenditure Database, also published through the World Bank.</p>
         </div>
 
-        <div class="chart-card" id="africaChart">
-          <div class="chart-card-head">
-            <h3>Current health expenditure, % of GDP — 2023</h3>
-            <p>Each circle is one African country. Size and shade scale with expenditure. Nigeria is marked.</p>
-          </div>
-          <div class="bubble-field" id="bubbleField"></div>
-          <p class="chart-callout">Nigeria spends <strong>4.19%</strong> of its GDP on health — ranked <strong>34th of 54</strong> African countries shown, below the group average.</p>
-          <p class="chart-source">Source: WHO Global Health Expenditure Database, via World Bank.</p>
-        </div>
+        <figure class="chart-figure">
+          <img src="images/africa-chart.png" alt="Bubble chart comparing current health expenditure as a percentage of GDP across 54 African countries in 2023, with Nigeria highlighted at 34th place with 4.19%.">
+          <figcaption>
+            <p class="chart-callout">Nigeria spends <strong>4.19%</strong> of its GDP on health — ranked <strong>34th of 54</strong> African countries shown, below the group average.</p>
+            <p class="chart-source">Source: WHO Global Health Expenditure Database, via World Bank.</p>
+          </figcaption>
+        </figure>
 
         <div class="section-copy">
           <p>At 4.19%, Nigeria sits in the lower half of the countries shown. However, this figure should not be interpreted as government health spending alone — current health expenditure includes healthcare spending from <strong>government, households and other financing sources</strong>, measured relative to the size of the economy <span class="src">(WHO, 2026)</span>.</p>
@@ -99,7 +101,7 @@
 
     <!-- ABUJA DECLARATION -->
     <section class="section alt" id="abuja">
-      <div class="section-inner">
+      <div class="wrap">
         <p class="kicker">02 — A promise made in Abuja</p>
         <h2>The target: 15%. The reality: a persistent gap.</h2>
         <div class="section-copy">
@@ -107,14 +109,12 @@
           <p>Looking specifically at 2015–2025, Nigeria's federal health allocation has consistently remained well below the 15% benchmark. Although the naira amount allocated to healthcare has grown substantially as the national budget has grown, the <strong>proportion of the overall budget devoted to health has remained relatively low.</strong></p>
         </div>
 
-        <div class="chart-card" id="budgetChart">
-          <div class="chart-card-head">
-            <h3>Share of national budget allocated to health, 2015–2025</h3>
-            <p>Dashed line marks the Abuja Declaration's 15% commitment.</p>
-          </div>
-          <div class="budget-chart" id="budgetBars"></div>
-          <p class="chart-source">Source: Nigeria Budget Office; African Union (2001).</p>
-        </div>
+        <figure class="chart-figure">
+          <img src="images/budget-chart.png" alt="Chart showing the share of Nigeria's national budget allocated to health from 2015 to 2025 compared with the Abuja Declaration's 15% target, styled as IV drip bags.">
+          <figcaption>
+            <p class="chart-source">Source: Nigeria Budget Office; African Union (2001).</p>
+          </figcaption>
+        </figure>
 
         <div class="section-copy">
           <p>From 2015 onwards, the percentage allocated to health fluctuated year to year, but the overall pattern remained clear: <strong>Nigeria did not reach the Abuja Declaration's 15% benchmark during the period examined</strong>. Even the 2025 budget continued this pattern. More money is being allocated to healthcare — but the question remains: is healthcare receiving enough priority within the national budget?</p>
@@ -124,30 +124,29 @@
 
     <!-- HUMAN COST -->
     <section class="section" id="human-cost">
-      <div class="section-inner narrow">
+      <div class="wrap narrow">
         <p class="kicker">03 — When the gap becomes human</p>
         <h2>253,000 lives is not just a number</h2>
         <div class="section-copy">
           <p>Budgets and percentages can feel distant, but behind healthcare funding are people whose lives depend on being able to access appropriate care when they need it. Research from the <strong>Lancet Global Health Commission on High Quality Health Systems</strong> estimated that around 253,000 deaths per year in Nigeria were associated with insufficient access to healthcare, while a further 123,000 deaths were associated with poor-quality care <span class="src">(Kruk et al., 2018)</span>.</p>
         </div>
 
-        <div class="mortality-stats">
-          <div class="mortality-card major">
-            <span class="mortality-num" data-count="253000">0</span>
-            <span class="mortality-label">estimated deaths each year associated with <strong>insufficient access</strong> to healthcare</span>
-          </div>
-          <div class="mortality-card">
-            <span class="mortality-num" data-count="123000">0</span>
-            <span class="mortality-label">further deaths each year associated with <strong>poor-quality care</strong></span>
-          </div>
+        <figure class="chart-figure">
+          <img src="images/tree-chart.png" alt="Illustration of a tree losing its leaves, representing the estimated 253,000 people in Nigeria who die every year due to lack of access to healthcare.">
+          <figcaption>
+            <p class="chart-source">Source: BusinessDay Nigeria.</p>
+          </figcaption>
+        </figure>
+
+        <div class="section-copy">
+          <p class="mortality-note">A number this large can easily become just another statistic. But each number represents a person — and behind every person is a family, a community and a story.</p>
         </div>
-        <p class="mortality-note">A number this large can easily become just another statistic. But each number represents a person — and behind every person is a family, a community and a story.</p>
       </div>
     </section>
 
     <!-- WORKFORCE -->
     <section class="section alt" id="workforce">
-      <div class="section-inner">
+      <div class="wrap">
         <p class="kicker">04 — A system losing its people</p>
         <h2>Not enough hands on deck</h2>
         <div class="section-copy two-col">
@@ -169,7 +168,7 @@
 
     <!-- VOICES FROM THE WARD -->
     <section class="section voices-section" id="voices">
-      <div class="section-inner">
+      <div class="wrap">
         <p class="kicker">05 — Voices from the ward</p>
         <h2>What Nigerian healthcare workers endure</h2>
         <div class="section-copy">
@@ -177,93 +176,9 @@
           <p class="fine-print">These responses are not intended to represent Nigeria's entire healthcare workforce. The sample is small and geographically concentrated. Instead, they offer first-hand perspective that connects the national statistics in this project with experience inside healthcare facilities.</p>
         </div>
 
-        <div class="voices-grid">
-          <div class="vcard vcard-headline">
-            <span class="vheadline-num">93%</span>
-            <span class="vheadline-label">said their salary did not cover basic cost of living, pushing many toward second jobs or emigration.</span>
-          </div>
-          <div class="vcard vcard-headline">
-            <span class="vheadline-num">73%</span>
-            <span class="vheadline-label">worked without electricity or a backup generator during life-or-death emergencies.</span>
-          </div>
-          <div class="vcard vcard-headline warn">
-            <span class="vheadline-num">8/14</span>
-            <span class="vheadline-label">explicitly reported a case where systemic neglect contributed directly to a patient's death.</span>
-          </div>
-        </div>
-
-        <div class="chart-card">
-          <div class="chart-card-head">
-            <h3>Critical equipment missing during emergencies</h3>
-            <p>Of 15 respondents, number who reported key life-saving gear was unavailable when needed most.</p>
-          </div>
-          <ul class="bar-list" id="equipmentBars">
-            <li data-value="11" data-total="15" data-label="Electricity / backup generator"></li>
-            <li data-value="7" data-total="15" data-label="Medical oxygen"></li>
-            <li data-value="5" data-total="15" data-label="Working suction machines"></li>
-            <li data-value="4" data-total="15" data-label="Sterile gloves / basic consumables"></li>
-            <li data-value="4" data-total="15" data-label="Functional patient monitors"></li>
-          </ul>
-        </div>
-
-        <div class="voices-two-col">
-          <div class="chart-card small">
-            <div class="chart-card-head">
-              <h3>Functional ambulance service?</h3>
-            </div>
-            <ul class="bar-list compact" id="ambulanceBars">
-              <li data-value="7" data-total="15" data-label="Never functional"></li>
-              <li data-value="4" data-total="15" data-label="No service at all"></li>
-              <li data-value="4" data-total="15" data-label="Yes, basic service"></li>
-            </ul>
-          </div>
-          <div class="chart-card small">
-            <div class="chart-card-head">
-              <h3>Who paid for ambulance logistics?</h3>
-            </div>
-            <ul class="bar-list compact" id="payerBars">
-              <li data-value="7" data-total="15" data-label="Patient's family"></li>
-              <li data-value="5" data-total="15" data-label="No ambulance available"></li>
-              <li data-value="3" data-total="15" data-label="The hospital"></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="chart-card">
-          <div class="chart-card-head">
-            <h3>Max patients per night shift</h3>
-            <p>Patient load per nurse or medical officer on shift. Recommended safe limit: 4.</p>
-          </div>
-          <div class="range-chart">
-            <div class="range-track">
-              <div class="range-safe" style="width:23.5%"></div>
-              <span class="range-marker" style="left:52.9%"><span class="range-marker-tag">avg ~9</span></span>
-            </div>
-            <div class="range-scale">
-              <span>4 (min)</span>
-              <span>10</span>
-              <span>17 (max)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="voices-two-col">
-          <div class="chart-card small">
-            <div class="chart-card-head"><h3>Gender breakdown</h3></div>
-            <ul class="bar-list compact" id="genderBars">
-              <li data-value="10" data-total="15" data-label="Female"></li>
-              <li data-value="5" data-total="15" data-label="Male"></li>
-            </ul>
-          </div>
-          <div class="chart-card small">
-            <div class="chart-card-head"><h3>Practice environment</h3></div>
-            <ul class="bar-list compact" id="practiceBars">
-              <li data-value="7" data-total="15" data-label="Private health facility"></li>
-              <li data-value="5" data-total="15" data-label="Federal government"></li>
-              <li data-value="3" data-total="15" data-label="State government"></li>
-            </ul>
-          </div>
-        </div>
+        <figure class="chart-figure dark">
+          <img src="images/voices-chart.png" alt="Dashboard showing survey results from 15 Nigerian healthcare workers covering salary deficit, power failure, breaking-point events, missing equipment, ambulance access, night-shift patient load, gender breakdown and practice environment.">
+        </figure>
 
         <div class="section-copy">
           <p>These findings should be interpreted cautiously — the sample cannot establish how common these experiences are across Nigeria. But they provide an important human perspective alongside the expenditure, budget and mortality data explored throughout this project. Some respondents reported caring for as many as <strong>17 patients during a single night shift.</strong></p>
@@ -273,7 +188,7 @@
 
     <!-- CONCLUSION -->
     <section class="section conclusion" id="conclusion">
-      <div class="section-inner narrow">
+      <div class="wrap narrow">
         <p class="kicker">Conclusion</p>
         <h2>Beyond the numbers</h2>
         <div class="section-copy">
@@ -287,8 +202,8 @@
     </section>
 
     <!-- WHAT NEEDS TO CHANGE -->
-    <section class="section change-section" id="change">
-      <div class="section-inner">
+    <section class="section change-section alt" id="change">
+      <div class="wrap">
         <p class="kicker">What needs to change</p>
         <h2>Funding is necessary. It isn't sufficient.</h2>
         <div class="section-copy">
@@ -332,8 +247,7 @@
 
     <!-- ABOUT -->
     <section class="section about-section" id="about">
-      <div class="about-banner" style="background-image:url('images/banner.jpg')"></div>
-      <div class="section-inner">
+      <div class="wrap">
         <div class="about-grid">
           <div class="about-photo-wrap">
             <img src="images/profile.png" alt="Portrait of Nurudeen Abolarinwa" class="about-photo">
@@ -365,29 +279,24 @@
 
     <!-- CONTACT -->
     <section class="section contact-section" id="contact">
-      <div class="section-inner narrow center">
+      <div class="wrap narrow center">
         <p class="kicker">Get in touch</p>
         <h2>Let's talk about your next data story</h2>
         <p class="contact-sub">Open to opportunities in data visualization, analysis and BI. Reach out directly.</p>
         <div class="contact-actions">
-          <a class="btn btn-primary" href="https://wa.me/447450790379" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.98.575 3.828 1.567 5.386L2 22l4.735-1.53A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2a8.19 8.19 0 01-4.184-1.147l-.3-.178-3.117 1.007 1.024-3.037-.196-.312A8.19 8.19 0 013.8 12c0-4.53 3.67-8.2 8.2-8.2s8.2 3.67 8.2 8.2-3.67 8.2-8.2 8.2z"/></svg>
-            WhatsApp
-          </a>
-          <a class="btn btn-secondary" href="https://linkedin.com/in/nurudeen-abolarinwa-079060182" target="_blank" rel="noopener">
+          <a class="btn btn-primary" href="https://linkedin.com/in/nurudeen-abolarinwa-079060182" target="_blank" rel="noopener">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
+            Connect on LinkedIn
           </a>
         </div>
-        <p class="contact-note">+44 7450 790379 · Available for freelance &amp; full-time roles</p>
+        <p class="contact-note">Available for freelance &amp; full-time roles</p>
       </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <div class="section-inner">
-      <p>The Cost of Delay — a data story on Nigeria's healthcare system.</p>
+    <div class="wrap">
       <p class="footer-sources">Sources: World Bank (2026) · WHO/AHOP (2025) · WHO Global Health Expenditure Database (2026) · African Union (2001) · Kruk et al., <em>Lancet Global Health Commission</em> (2018) · Nigeria Budget Office · BusinessDay Nigeria · original healthcare-worker questionnaire (n=15).</p>
       <p class="footer-credit">Designed &amp; developed by Nurudeen Abolarinwa.</p>
     </div>
